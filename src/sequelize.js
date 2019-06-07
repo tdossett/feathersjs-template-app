@@ -3,7 +3,7 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 module.exports = function (app) {
-  const connectionString = `postgres://${process.env.PGNAME}:${process.env.PGPASS}@dostekinc.cia2kszvjdsy.us-east-2.rds.amazonaws.com:${process.env.PGPORT}/dostekinc?sslmode=verify-full sslrootcert=config/rds-combined-ca-bundle.pem`;
+  const connectionString = `postgres://${process.env.PGNAME}:${process.env.PGPASS}@dostekinc.cia2kszvjdsy.us-east-2.rds.amazonaws.com:${process.env.PGPORT}/dostekinc?sslmode=verify-full&sslrootcert=config/rds-combined-ca-bundle.pem`;
   const sequelize = new Sequelize(connectionString, {
     dialect: 'postgres',
     logging: false,
@@ -20,7 +20,7 @@ module.exports = function (app) {
   const oldSetup = app.setup;
 
   /* eslint-disable no-console */
-  console.log('connectionString: ', connectionString);
+  // console.log('connectionString: ', connectionString);
   /* eslint-enable no-console */
 
   app.set('sequelizeClient', sequelize);
@@ -39,7 +39,7 @@ module.exports = function (app) {
     // Sync to the database
     sequelize.sync();
     /* eslint-disable no-console */
-    sequelize.query('SELECT * from customer').then(console.log, (e) => console.error('sequelize errback', e));
+    // sequelize.query('SELECT * from customer').then(console.log, (e) => console.error('sequelize errback', e));
     /* eslint-enable no-console */
 
     return result;
