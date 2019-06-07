@@ -3,7 +3,7 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 module.exports = function (app) {
-  const connectionString = `postgres://${process.env.PGNAME}:${process.env.PGPASS}@dostekinc.cia2kszvjdsy.us-east-2.rds.amazonaws.com:${process.env.PGPORT}/dostekinc?sslmode=verify-full&sslca=config/rds-combined-ca-bundle.pem`;
+  const connectionString = `postgres://${process.env.PGNAME}:${process.env.PGPASS}@dostekinc.cia2kszvjdsy.us-east-2.rds.amazonaws.com:${process.env.PGPORT}/dostekinc?sslmode=verify-full&sslrootcert=config/rds-combined-ca-bundle.pem`;
   const sequelize = new Sequelize(connectionString, {
     dialect: 'postgres',
     logging: false,
