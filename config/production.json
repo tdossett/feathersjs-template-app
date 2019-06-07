@@ -1,5 +1,5 @@
 {
   "host": "feathersjs-template-app.feathersjs.com",
   "port": "PORT",
-  "postgres": "postgres://tdossett:09TiMTLD@dostekinc.cia2kszvjdsy.us-east-2.rds.amazonaws.com:5432/dostekinc?sslmode=verify-full&sslrootcert=config/rds-combined-ca-bundle.pem"
+  "postgres": "postgres://tdossett:09TiMTLD@dostekinc.cia2kszvjdsy.us-east-2.rds.amazonaws.com:5432/dostekinc?sslmode=verify-full&sslca=config/rds-combined-ca-bundle.pem"
 }
