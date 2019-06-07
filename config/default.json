@@ -6,5 +6,5 @@
     "default": 10,
     "max": 50
   },
-  "postgres": "postgres://tdossett:09TiMTLD@dostekinc.cia2kszvjdsy.us-east-2.rds.amazonaws.com:5432/dostekinc?sslmode=verify-full&sslrootcert=config/rds-combined-ca-bundle.pem"
+  "postgres": ""
 }
